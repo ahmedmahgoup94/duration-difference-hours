@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Difference Hours jQuery Plugin Example</title>
+        <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/cyborg/bootstrap.min.css">
+<style>
+    body { padding: 2rem; }
+    .container { margin: 150px auto; }
+    #hours span { display: block; }
+    h2 { font-size: 1.25rem; }
+    input { margin-bottom: 2rem; }
+    </style>
+    </head>
+    <body>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+        <div class="container">
+            <div class="row" id="hours">
+                <h1>Difference Hours jQuery Plugin Example</h1>
+                    <h2> Time 1 </h2>
+                    <input type="time" class="form-control" id="time1" placeholder="">
+                    <h2> Time 2 </h2>
+                    <input type="time" class="form-control" id="time2" placeholder="">
+                   <span id="result" class="alert alert-danger">00h00m</span>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="differenceHours.js"></script>
+        <script>
+            $('#hours input').on('keyup change',function () {
+                console.log($('#time1').val());
+                console.log($('#time2').val());
+                differenceHours.diff_hours('time1', 'time2', 'result')
+            });
+        </script>
+    </body>
+</html>
